@@ -10,6 +10,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Bonus](#bonus)
 - [Author](#author)
 
 ## Overview
@@ -23,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/reactscss-results-summary-with-data-randomizer-PuPZ1naeWo)
+- [Live site](https://fm-results-summary-9000.netlify.app/)
 
 ### Screenshot
 
@@ -52,6 +53,8 @@ Users should be able to:
 - SCSS
 - Mobile-first workflow
 - React (with Vite)
+
+### Bonus
 
 - Added Tablet view
 - Added randomizer for names and score
