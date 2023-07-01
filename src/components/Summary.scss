@@ -1,0 +1,35 @@
+@use "../scss/colors";
+
+$bg-opacity: 0.075;
+
+.red {
+  background-color: rgba(colors.$red, $bg-opacity);
+
+  & > .category {
+    color: colors.$red;
+  }
+}
+
+.yellow {
+  background-color: rgba(colors.$yellow, $bg-opacity);
+
+  & > .category {
+    color: colors.$yellow;
+  }
+}
+
+.green {
+  background-color: rgba(colors.$green, $bg-opacity);
+
+  & > .category {
+    color: colors.$green;
+  }
+}
+
+.blue {
+  background-color: rgba(colors.$blue, $bg-opacity);
+
+  & > .category {
+    color: colors.$blue;
+  }
+}

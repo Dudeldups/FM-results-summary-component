@@ -1,0 +1,21 @@
+@use "../scss/colors";
+@use "../scss/gradients";
+
+.result {
+  background: linear-gradient(gradients.$slate-royal-blue);
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.title {
+  color: colors.$lavender;
+}
+
+.circle {
+  background: linear-gradient(gradients.$violet-persian-blue);
+  border-radius: 50%;
+  width: min(37vw, 12.5rem);
+  aspect-ratio: 1 / 1;
+}
