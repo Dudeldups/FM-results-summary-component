@@ -1,17 +1,24 @@
 @use "../scss/colors";
 @use "../scss/gradients";
+@use "../scss/mixins" as *;
 
 .result {
   background: linear-gradient(gradients.$slate-royal-blue);
   padding: 1.5rem 1.5rem 2.5rem;
   text-align: center;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 0 0 30px 30px;
+
+  @include mq-desktop {
+    padding: 2.5rem 3.5rem 3.5rem;
+    border-radius: 30px;
+  }
 
   &__title {
     color: colors.$pale-blue;
-    font-size: clamp(1.2rem, 0.71rem + 2.06vw, 1.4rem);
+    font-size: clamp(1.25rem, 0.64rem + 2.58vw, 1.5rem);
   }
 
   &__circle {
@@ -26,11 +33,12 @@
 
   &__score {
     color: colors.$white;
-    font-size: clamp(3.4rem, 0.74rem + 11.35vw, 4.5rem);
+    font-size: clamp(3rem, 0.74rem + 11.35vw, 4.5rem);
     font-weight: 700;
 
     &-max {
       color: colors.$lavender;
+      font-size: clamp(1rem, 0.7rem + 1.8vw, 1.25rem);
     }
   }
 
@@ -46,5 +54,9 @@
     max-width: 30ch;
     font-size: clamp(1rem, 0.7rem + 1.29vw, 1.125rem);
     color: colors.$lavender;
+
+    @include mq-desktop {
+      max-width: 25ch;
+    }
   }
 }
