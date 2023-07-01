@@ -21,11 +21,11 @@ export default function Summary({ skillSummary }) {
     }
 
     return (
-      <article className={"skill " + color} key={skill.category}>
+      <article className={`summary__skill ${color}`} key={skill.category}>
         <img src={skill.icon} alt="" />
-        <p className="category">{skill.category}</p>
-        <p className="score">
-          {skill.score} <span className="score-max">/ 100</span>
+        <p className="summary__category">{skill.category}</p>
+        <p className="summary__score">
+          <span className="summary__score-achieved">{skill.score}</span> / 100
         </p>
       </article>
     );
@@ -33,9 +33,9 @@ export default function Summary({ skillSummary }) {
 
   return (
     <div className="summary">
-      <h2 className="title">Summary</h2>
-      <div className="skills">{skills}</div>
-      <button>Continue</button>
+      <h2 className="summary__title">Summary</h2>
+      <div className="summary__skills">{skills}</div>
+      <button className="summary__button">Continue</button>
     </div>
   );
 }
