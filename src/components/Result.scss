@@ -51,12 +51,8 @@
 
   &__recap {
     margin-top: 1rem;
-    max-width: 30ch;
+    max-width: 34ch;
     font-size: clamp(1rem, 0.7rem + 1.29vw, 1.125rem);
     color: colors.$lavender;
-
-    @include mq-desktop {
-      max-width: 25ch;
-    }
   }
 }

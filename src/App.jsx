@@ -9,19 +9,27 @@ export default function App() {
 
   useEffect(() => {
     setAverageScore(() => {
-      const sumOfScores = data.reduce((sum, skill) => sum + skill.score, 0);
+      const sumOfScores = skillSummary.reduce(
+        (sum, skill) => sum + skill.score,
+        0
+      );
       return Math.round(sumOfScores / skillSummary.length);
     });
   }, skillSummary);
 
-  const test = data.map(item => {
-    return item.category;
-  });
+  const handleClick = () => {
+    setSkillSummary(oldData =>
+      oldData.map(skill => ({
+        ...skill,
+        score: Math.round(Math.random() * 50 + 50),
+      }))
+    );
+  };
 
   return (
     <div className="card">
       <Result averageScore={averageScore} />
-      <Summary skillSummary={skillSummary} />
+      <Summary skillSummary={skillSummary} handleClick={handleClick} />
     </div>
   );
 }

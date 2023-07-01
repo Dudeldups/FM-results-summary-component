@@ -1,6 +1,6 @@
 import "./Summary.scss";
 
-export default function Summary({ skillSummary }) {
+export default function Summary({ skillSummary, handleClick }) {
   const skills = skillSummary.map(skill => {
     let color;
     switch (skill.category) {
@@ -35,7 +35,9 @@ export default function Summary({ skillSummary }) {
     <div className="summary">
       <h2 className="summary__title">Summary</h2>
       <div className="summary__skills">{skills}</div>
-      <button className="summary__button">Continue</button>
+      <button className="summary__button" onClick={handleClick}>
+        Continue
+      </button>
     </div>
   );
 }
